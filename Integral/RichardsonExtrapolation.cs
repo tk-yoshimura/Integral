@@ -5,7 +5,7 @@ namespace Integral {
 
 	/// <summary>Richardsonの補外法</summary>
 	public class RichardsonExtrapolation {
-        readonly List<double[]> values = new List<double[]>();
+        readonly List<double[]> values = new();
 
         /// <summary>収束数列値を挿入</summary>
         public void Inject(double new_value) {

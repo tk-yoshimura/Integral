@@ -2,7 +2,7 @@
  Romberg Integral Implementation
 
 ## Requirement
- .NET Standard 2.0
+ .NET 5.0
  
  ## Install
 [Download DLL](https://github.com/tk-yoshimura/Integral/releases)

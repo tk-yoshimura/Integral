@@ -12,20 +12,20 @@ namespace Integral {
         /// <param name="precision_level">精度レベル</param>
         /// <remarks>有効桁数14-15桁 精度レベルは大きすぎるとかえって誤差が大きくなる</remarks>
         public static double Integrate(Func<double, double> func, double a, double b, int precision_level = 10) {
-            if(func == null) {
+            if(func is null) {
                 throw new ArgumentNullException(nameof(func));
             }
             if(!(a <= b)) {
                 throw new ArgumentException($"{nameof(a)},{nameof(b)}");
             }
             if(precision_level < 1 || precision_level > 16) {
-                throw new ArgumentException(nameof(precision_level));
+                throw new ArgumentOutOfRangeException(nameof(precision_level));
             }
 
             int max_div = 1 << precision_level;
             double h = b - a, min_h = (b - a) / max_div;
             double[] v = new double[max_div + 1];
-            RichardsonExtrapolation conv = new RichardsonExtrapolation();
+            RichardsonExtrapolation conv = new();
 
             for(int i = 0; i <= max_div; i++) {
                 v[i] = func(a + i * min_h);

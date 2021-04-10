@@ -3,9 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integral", "Integral\Integral.csproj", "{6A50439C-3078-4175-A554-69E789B09EC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Integral", "Integral\Integral.csproj", "{6A50439C-3078-4175-A554-69E789B09EC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegralTest", "IntegralTest\IntegralTest.csproj", "{E5266A65-C0D1-4DC7-9DE3-B36751CA4C19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegralTest", "IntegralTest\IntegralTest.csproj", "{E5266A65-C0D1-4DC7-9DE3-B36751CA4C19}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6A50439C-3078-4175-A554-69E789B09EC2} = {6A50439C-3078-4175-A554-69E789B09EC2}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
