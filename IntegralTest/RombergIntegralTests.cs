@@ -2,7 +2,7 @@
 using System;
 
 namespace Integral.Tests {
-	[TestClass()]
+    [TestClass()]
     public class RombergIntegralTests {
         [TestMethod()]
         public void IntegrateTest() {
